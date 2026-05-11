@@ -1,0 +1,929 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Artigas Import Export — Papel, cartones y materiales gráficos · Bolivia</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --bg:#f5f3ee;
+    --bg-2:#ebe8e0;
+    --ink:#111210;
+    --ink-2:#2a2a26;
+    --muted:#6b6b65;
+    --line:#d9d6cd;
+    --line-2:#c7c3b6;
+    --accent:#1f6b3e;       /* forest green from Oriental Paper labels */
+    --accent-ink:#0d3a21;
+    --paper:#fffefa;
+  }
+  *{box-sizing:border-box}
+  html,body{margin:0;padding:0;background:var(--bg);color:var(--ink);font-family:'Inter',sans-serif;-webkit-font-smoothing:antialiased;font-feature-settings:"ss01","cv11"}
+  body{overflow-x:hidden}
+  .display{font-family:'Space Grotesk',sans-serif;letter-spacing:-0.02em;line-height:0.98}
+  .mono{font-family:'JetBrains Mono',monospace;font-size:11px;letter-spacing:0.06em;text-transform:uppercase}
+  a{color:inherit;text-decoration:none}
+  img{display:block;max-width:100%}
+  button{font-family:inherit;cursor:pointer;border:0;background:none;color:inherit}
+  /* layout */
+  .wrap{max-width:1320px;margin:0 auto;padding:0 32px}
+  @media (max-width:720px){.wrap{padding:0 20px}}
+  /* nav */
+  .nav{position:sticky;top:0;z-index:50;background:rgba(245,243,238,0.85);backdrop-filter:saturate(140%) blur(14px);border-bottom:1px solid var(--line)}
+  .nav-row{display:flex;align-items:center;justify-content:space-between;padding:18px 0}
+  .brand{display:flex;align-items:center;gap:12px}
+  .brand-logo{width:38px;height:38px;flex-shrink:0}
+  .brand-name{font-family:'Space Grotesk';font-weight:600;font-size:16px;letter-spacing:-0.01em;line-height:1.1}
+  .brand-name small{display:block;color:var(--muted);font-weight:400;font-size:10px;letter-spacing:0.14em;text-transform:uppercase;margin-top:2px}
+  .nav-actions{display:flex;gap:12px;align-items:center}
+  .nav-wa{display:inline-flex;align-items:center;gap:8px;padding:10px 16px;border-radius:999px;background:#1faa53;color:#fff;font-size:13px;font-weight:500;transition:all .2s}
+  .nav-wa:hover{background:#178a43;transform:translateY(-1px)}
+  .nav-wa svg{width:16px;height:16px;fill:#fff}
+  @media (max-width:520px){.nav-wa span.lbl{display:none}}
+  .nav-links{display:flex;gap:28px;align-items:center}
+  .nav-links a{font-size:14px;color:var(--ink-2);transition:color .2s}
+  .nav-links a:hover{color:var(--accent)}
+  .nav-cta{background:var(--ink);color:var(--paper);padding:10px 18px;border-radius:999px;font-size:13px;font-weight:500;display:inline-flex;align-items:center;gap:8px;transition:transform .2s, background .2s}
+  .nav-cta:hover{background:var(--accent);transform:translateY(-1px)}
+  @media (max-width:880px){.nav-links{display:none}}
+
+  /* hero */
+  .hero{padding:64px 0 96px;position:relative}
+  .hero-grid{display:grid;grid-template-columns:1.05fr 0.95fr;gap:64px;align-items:center}
+  @media (max-width:980px){.hero-grid{grid-template-columns:1fr;gap:40px}}
+  .eyebrow{display:inline-flex;align-items:center;gap:10px;color:var(--muted);margin-bottom:28px}
+  .eyebrow .dot{width:6px;height:6px;border-radius:50%;background:var(--accent);box-shadow:0 0 0 4px rgba(31,107,62,0.15)}
+  h1.hero-title{font-size:clamp(44px,6.2vw,82px);font-weight:600;margin:0 0 28px}
+  h1.hero-title .accent{color:var(--accent);font-style:italic;font-weight:500}
+  h1.hero-title .underline{position:relative;white-space:nowrap}
+  h1.hero-title .underline::after{content:"";position:absolute;left:0;right:0;bottom:6px;height:8px;background:var(--accent);opacity:.18;border-radius:2px}
+  .hero-sub{font-size:17px;line-height:1.55;color:var(--ink-2);max-width:520px;margin:0 0 36px}
+  .hero-ctas{display:flex;gap:14px;flex-wrap:wrap;margin-bottom:48px}
+  .btn{display:inline-flex;align-items:center;gap:10px;padding:16px 26px;border-radius:999px;font-weight:500;font-size:15px;transition:all .2s;border:1px solid transparent}
+  .btn-primary{background:var(--ink);color:var(--paper)}
+  .btn-primary:hover{background:var(--accent);transform:translateY(-2px);box-shadow:0 12px 30px -12px rgba(31,107,62,.5)}
+  .btn-ghost{background:transparent;color:var(--ink);border-color:var(--line-2)}
+  .btn-ghost:hover{background:var(--paper);border-color:var(--ink)}
+  .btn-wa{background:#1faa53;color:#fff}
+  .btn-wa:hover{background:#178a43}
+  .hero-stats{display:flex;gap:40px;flex-wrap:wrap}
+  .hero-stats .stat .num{font-family:'Space Grotesk';font-size:38px;font-weight:600;letter-spacing:-0.03em;display:block}
+  .hero-stats .stat .lbl{font-size:12px;color:var(--muted);margin-top:2px;display:block;text-transform:uppercase;letter-spacing:0.08em}
+
+  /* hero collage */
+  .collage{position:relative;height:640px}
+  @media (max-width:980px){.collage{height:520px;margin-top:8px}}
+  .col-img{position:absolute;border-radius:6px;overflow:hidden;box-shadow:0 24px 60px -28px rgba(0,0,0,.35)}
+  .col-img img{width:100%;height:100%;object-fit:cover;transition:transform .8s ease}
+  .col-img:hover img{transform:scale(1.04)}
+  .col-1{top:0;right:0;width:62%;height:78%}
+  .col-2{bottom:0;left:0;width:48%;height:46%}
+  .col-3{top:36%;left:8%;width:34%;height:36%;display:none}
+  @media (min-width:1100px){.col-3{display:block}}
+  .col-tag{position:absolute;background:var(--paper);padding:14px 18px;border-radius:6px;box-shadow:0 12px 32px -12px rgba(0,0,0,.25);display:flex;align-items:center;gap:12px}
+  .col-tag.t1{top:24px;left:-8px;}
+  .col-tag.t2{bottom:24px;right:8px;}
+  @media (max-width:980px){.col-tag.t1{left:0}.col-tag.t2{right:0}}
+  .col-tag .tag-num{font-family:'Space Grotesk';font-size:22px;font-weight:600;color:var(--accent)}
+  .col-tag .tag-text{font-size:12px;line-height:1.3;color:var(--ink-2);max-width:130px}
+
+  /* benefits strip */
+  .strip{border-top:1px solid var(--line);border-bottom:1px solid var(--line);background:var(--bg-2);padding:18px 0;overflow:hidden}
+  .strip-track{display:flex;gap:56px;animation:scroll 40s linear infinite;white-space:nowrap}
+  @keyframes scroll{from{transform:translateX(0)}to{transform:translateX(-50%)}}
+  .strip-item{display:inline-flex;align-items:center;gap:10px;color:var(--ink-2);font-size:14px}
+  .strip-item .check{color:var(--accent);font-weight:700}
+
+  /* sections */
+  section{padding:120px 0;position:relative}
+  @media (max-width:720px){section{padding:80px 0}}
+  .section-head{display:grid;grid-template-columns:1fr 1.6fr;gap:64px;align-items:end;margin-bottom:64px}
+  @media (max-width:880px){.section-head{grid-template-columns:1fr;gap:24px}}
+  .section-kicker{font-family:'JetBrains Mono';font-size:11px;letter-spacing:0.12em;text-transform:uppercase;color:var(--accent);margin-bottom:18px;display:flex;align-items:center;gap:10px}
+  .section-kicker::before{content:"";width:32px;height:1px;background:var(--accent)}
+  h2.section-title{font-size:clamp(36px,4.4vw,60px);font-weight:600;margin:0;letter-spacing:-0.025em;line-height:1.02}
+  h2.section-title .it{font-style:italic;color:var(--accent);font-weight:500}
+  .section-lead{font-size:16px;line-height:1.6;color:var(--ink-2);max-width:480px}
+
+  /* about */
+  .about{background:var(--ink);color:var(--paper)}
+  .about .section-kicker{color:#7fc69b}
+  .about .section-kicker::before{background:#7fc69b}
+  .about h2.section-title .it{color:#7fc69b}
+  .about-grid{display:grid;grid-template-columns:1fr 1fr;gap:80px}
+  @media (max-width:880px){.about-grid{grid-template-columns:1fr;gap:40px}}
+  .about-image{border-radius:6px;overflow:hidden;height:520px}
+  .about-image img{width:100%;height:100%;object-fit:cover}
+  .about-text p{font-size:17px;line-height:1.65;color:#cfcec8;margin:0 0 22px}
+  .about-text p:first-child{font-size:22px;line-height:1.45;color:var(--paper);font-weight:400}
+  .about-meta{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;margin-top:40px;padding-top:32px;border-top:1px solid #2a2a26}
+  .about-meta .m .v{font-family:'Space Grotesk';font-size:30px;font-weight:600;color:var(--paper);display:block}
+  .about-meta .m .k{font-size:12px;color:#9b9a92;text-transform:uppercase;letter-spacing:0.08em;margin-top:4px;display:block}
+
+  /* products */
+  .filters{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:32px}
+  .chip{padding:9px 16px;border-radius:999px;border:1px solid var(--line-2);font-size:13px;color:var(--ink-2);transition:all .2s;cursor:pointer;background:transparent}
+  .chip.active{background:var(--ink);color:var(--paper);border-color:var(--ink)}
+  .chip:hover:not(.active){border-color:var(--ink);background:var(--paper)}
+  .products-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:20px}
+  @media (max-width:1100px){.products-grid{grid-template-columns:repeat(3,1fr)}}
+  @media (max-width:780px){.products-grid{grid-template-columns:repeat(2,1fr)}}
+  @media (max-width:520px){.products-grid{grid-template-columns:1fr}}
+  .product{background:var(--paper);border:1px solid var(--line);border-radius:8px;overflow:hidden;display:flex;flex-direction:column;transition:all .25s;cursor:pointer}
+  .product:hover{transform:translateY(-4px);border-color:var(--ink-2);box-shadow:0 24px 50px -28px rgba(0,0,0,.25)}
+  .product-img{height:220px;overflow:hidden;background:var(--bg-2);position:relative}
+  .product-img img{width:100%;height:100%;object-fit:cover;transition:transform .6s}
+  .product:hover .product-img img{transform:scale(1.06)}
+  .product-tag{position:absolute;top:12px;left:12px;background:rgba(255,254,250,0.95);padding:5px 10px;border-radius:999px;font-size:10.5px;font-weight:600;color:var(--ink);letter-spacing:0.04em;text-transform:uppercase}
+  .product-body{padding:20px 20px 22px;flex:1;display:flex;flex-direction:column}
+  .product-title{font-family:'Space Grotesk';font-size:19px;font-weight:600;margin:0 0 8px;letter-spacing:-0.01em}
+  .product-desc{font-size:13.5px;line-height:1.5;color:var(--muted);margin:0 0 18px;flex:1}
+  .product-foot{display:flex;justify-content:space-between;align-items:center;padding-top:14px;border-top:1px solid var(--line)}
+  .product-foot .specs{font-size:11px;color:var(--muted);font-family:'JetBrains Mono';letter-spacing:0.04em}
+  .product-foot .arrow{color:var(--accent);font-size:18px;transition:transform .2s}
+  .product:hover .arrow{transform:translateX(4px)}
+
+  /* industries */
+  .industries{background:var(--bg-2)}
+  .ind-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:1px;background:var(--line);border:1px solid var(--line);border-radius:8px;overflow:hidden}
+  @media (max-width:880px){.ind-grid{grid-template-columns:repeat(2,1fr)}}
+  .ind-cell{background:var(--paper);padding:32px 24px;display:flex;flex-direction:column;justify-content:space-between;min-height:170px;transition:background .2s}
+  .ind-cell:hover{background:var(--bg)}
+  .ind-cell .num{font-family:'JetBrains Mono';font-size:11px;color:var(--muted);letter-spacing:0.08em}
+  .ind-cell .name{font-family:'Space Grotesk';font-size:22px;font-weight:500;letter-spacing:-0.01em;margin-top:auto}
+  .ind-cell .name .dot{display:inline-block;width:6px;height:6px;background:var(--accent);border-radius:50%;margin-left:6px;vertical-align:middle}
+
+  /* why-us */
+  .why-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:24px}
+  @media (max-width:980px){.why-grid{grid-template-columns:repeat(2,1fr)}}
+  @media (max-width:520px){.why-grid{grid-template-columns:1fr}}
+  .why-card{padding:32px 28px;border:1px solid var(--line);border-radius:8px;background:var(--paper);position:relative;overflow:hidden;transition:all .25s}
+  .why-card:hover{border-color:var(--accent);transform:translateY(-4px)}
+  .why-card .why-num{font-family:'Space Grotesk';font-size:46px;font-weight:600;color:var(--accent);letter-spacing:-0.04em;margin-bottom:32px;display:block}
+  .why-card h3{font-family:'Space Grotesk';font-size:20px;font-weight:600;margin:0 0 10px;letter-spacing:-0.01em}
+  .why-card p{font-size:14px;line-height:1.55;color:var(--muted);margin:0}
+
+  /* process */
+  .process{background:var(--ink);color:var(--paper)}
+  .process .section-kicker{color:#7fc69b}
+  .process .section-kicker::before{background:#7fc69b}
+  .process h2.section-title .it{color:#7fc69b}
+  .steps{display:grid;grid-template-columns:repeat(4,1fr);gap:0;margin-top:48px;border-top:1px solid #2a2a26}
+  @media (max-width:880px){.steps{grid-template-columns:1fr}}
+  .step{padding:36px 28px 36px 0;border-right:1px solid #2a2a26;position:relative}
+  @media (max-width:880px){.step{border-right:0;border-bottom:1px solid #2a2a26;padding:28px 0}}
+  .step:last-child{border-right:0}
+  .step .step-num{font-family:'JetBrains Mono';font-size:11px;color:#7fc69b;letter-spacing:0.12em;margin-bottom:20px;display:block}
+  .step h4{font-family:'Space Grotesk';font-size:22px;font-weight:500;margin:0 0 12px;letter-spacing:-0.01em}
+  .step p{font-size:14px;line-height:1.55;color:#9b9a92;margin:0}
+
+  /* CTA */
+  .cta{background:var(--accent);color:#fff;border-radius:0;position:relative;overflow:hidden}
+  .cta::before{content:"";position:absolute;inset:0;background:radial-gradient(ellipse at 80% 20%, rgba(255,255,255,.12),transparent 60%);pointer-events:none}
+  .cta-inner{display:grid;grid-template-columns:1.4fr 1fr;gap:64px;align-items:center;position:relative}
+  @media (max-width:880px){.cta-inner{grid-template-columns:1fr;gap:32px}}
+  .cta h2{font-family:'Space Grotesk';font-size:clamp(36px,5vw,64px);font-weight:600;letter-spacing:-0.025em;line-height:1.02;margin:0 0 22px}
+  .cta p{font-size:17px;line-height:1.55;color:rgba(255,255,255,.85);margin:0 0 32px;max-width:480px}
+  .cta-actions{display:flex;gap:14px;flex-wrap:wrap}
+  .cta .btn-primary{background:#fff;color:var(--accent-ink)}
+  .cta .btn-primary:hover{background:var(--ink);color:#fff;box-shadow:none}
+  .cta .btn-ghost{border-color:rgba(255,255,255,.4);color:#fff}
+  .cta .btn-ghost:hover{background:rgba(255,255,255,.12);border-color:#fff}
+  .contact-card{background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.18);border-radius:8px;padding:28px;backdrop-filter:blur(8px)}
+  .contact-card h4{font-family:'Space Grotesk';font-size:14px;font-weight:500;margin:0 0 18px;color:rgba(255,255,255,.7);text-transform:uppercase;letter-spacing:0.08em}
+  .contact-row{display:flex;align-items:center;gap:14px;padding:14px 0;border-top:1px solid rgba(255,255,255,.12);font-size:14.5px}
+  .contact-row:first-of-type{border-top:0}
+  .contact-row .ico{width:32px;height:32px;border-radius:50%;background:rgba(255,255,255,.12);display:grid;place-items:center;font-size:14px;flex-shrink:0}
+  .contact-row .label{color:rgba(255,255,255,.6);font-size:11.5px;text-transform:uppercase;letter-spacing:0.08em;margin-bottom:2px}
+  .contact-row a:hover{text-decoration:underline}
+
+  /* footer */
+  footer{background:#0a0b09;color:#9b9a92;padding:64px 0 28px;font-size:14px}
+  .foot-grid{display:grid;grid-template-columns:1.5fr 1fr 1fr 1fr;gap:48px;margin-bottom:48px}
+  @media (max-width:880px){.foot-grid{grid-template-columns:1fr 1fr;gap:32px}}
+  .foot-grid h5{font-family:'Space Grotesk';font-size:13px;color:var(--paper);font-weight:500;margin:0 0 16px;text-transform:uppercase;letter-spacing:0.08em}
+  .foot-grid ul{list-style:none;padding:0;margin:0}
+  .foot-grid li{margin-bottom:10px}
+  .foot-grid a:hover{color:#7fc69b}
+  .foot-bottom{padding-top:24px;border-top:1px solid #1a1b18;display:flex;justify-content:space-between;flex-wrap:wrap;gap:14px;font-size:12px;color:#6b6b65}
+  .foot-brand-name{font-family:'Space Grotesk';font-size:18px;font-weight:600;color:var(--paper);margin-bottom:14px}
+
+  /* modal */
+  .modal-backdrop{position:fixed;inset:0;background:rgba(10,11,9,.6);backdrop-filter:blur(6px);z-index:100;display:grid;place-items:center;padding:24px;animation:fadeIn .2s ease}
+  @keyframes fadeIn{from{opacity:0}to{opacity:1}}
+  .modal{background:var(--paper);border-radius:10px;max-width:560px;width:100%;max-height:90vh;overflow-y:auto;box-shadow:0 40px 80px -20px rgba(0,0,0,.4);animation:slideUp .25s cubic-bezier(.2,.8,.3,1)}
+  @keyframes slideUp{from{transform:translateY(20px);opacity:0}to{transform:translateY(0);opacity:1}}
+  .modal-head{padding:28px 32px 20px;border-bottom:1px solid var(--line);display:flex;justify-content:space-between;align-items:flex-start}
+  .modal-head h3{font-family:'Space Grotesk';font-size:24px;font-weight:600;margin:0 0 6px;letter-spacing:-0.01em}
+  .modal-head p{margin:0;color:var(--muted);font-size:14px}
+  .modal-close{width:32px;height:32px;border-radius:50%;background:var(--bg-2);display:grid;place-items:center;font-size:18px;color:var(--ink-2)}
+  .modal-close:hover{background:var(--ink);color:var(--paper)}
+  .modal-body{padding:24px 32px 32px}
+  .field{margin-bottom:18px}
+  .field label{display:block;font-size:12px;color:var(--ink-2);margin-bottom:8px;font-weight:500;letter-spacing:0.02em;text-transform:uppercase}
+  .field input,.field select,.field textarea{width:100%;padding:13px 14px;border:1px solid var(--line-2);border-radius:6px;font-family:inherit;font-size:14.5px;background:var(--paper);color:var(--ink);transition:border .15s}
+  .field input:focus,.field select:focus,.field textarea:focus{outline:none;border-color:var(--accent);box-shadow:0 0 0 3px rgba(31,107,62,.12)}
+  .field textarea{resize:vertical;min-height:90px;font-family:inherit}
+  .field-row{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+  @media (max-width:520px){.field-row{grid-template-columns:1fr}}
+  .modal-foot{display:flex;gap:10px;justify-content:flex-end;margin-top:8px}
+  .success{text-align:center;padding:30px 16px}
+  .success .check-big{width:72px;height:72px;border-radius:50%;background:var(--accent);color:#fff;display:grid;place-items:center;margin:0 auto 18px;font-size:32px}
+
+  /* map */
+  .map-block{margin-top:32px;border-radius:8px;overflow:hidden;border:1px solid rgba(255,255,255,.18);background:rgba(255,255,255,.05);position:relative}
+  .map-block iframe{width:100%;height:280px;border:0;display:block;filter:grayscale(0.15) contrast(1.05)}
+  .map-foot{padding:14px 18px;display:flex;justify-content:space-between;align-items:center;font-size:13px;background:rgba(0,0,0,.18);color:rgba(255,255,255,.85)}
+  .map-foot a{display:inline-flex;align-items:center;gap:6px;color:#fff;font-weight:500}
+  .map-foot a:hover{text-decoration:underline}
+
+  /* mobile nav */
+  .nav-burger{display:none;width:38px;height:38px;border-radius:8px;border:1px solid var(--line-2);align-items:center;justify-content:center;flex-direction:column;gap:4px;background:transparent;cursor:pointer}
+  .nav-burger span{width:16px;height:1.5px;background:var(--ink);display:block}
+  @media (max-width:880px){
+    .nav-burger{display:flex}
+    .nav-links{position:fixed;top:0;right:0;bottom:0;width:78%;max-width:340px;background:var(--paper);flex-direction:column;align-items:flex-start;padding:84px 28px 28px;gap:0;transform:translateX(100%);transition:transform .3s cubic-bezier(.2,.8,.3,1);box-shadow:-20px 0 60px -20px rgba(0,0,0,.25);z-index:60}
+    .nav-links.open{transform:translateX(0)}
+    .nav-links a{font-size:18px;padding:16px 0;border-bottom:1px solid var(--line);width:100%;font-family:'Space Grotesk';font-weight:500}
+    .nav-overlay{position:fixed;inset:0;background:rgba(10,11,9,.4);backdrop-filter:blur(4px);z-index:55;animation:fadeIn .2s}
+  }
+  @media (max-width:520px){
+    .hero{padding:40px 0 64px}
+    .hero-stats{gap:20px}
+    .hero-stats .stat .num{font-size:26px}
+    .nav-cta{padding:9px 14px;font-size:12.5px}
+    .nav-wa{padding:9px 12px}
+    .col-tag.t1{padding:10px 12px}
+    .col-tag .tag-num{font-size:18px}
+    .btn{padding:14px 22px;font-size:14px}
+    .modal{border-radius:10px 10px 0 0;align-self:flex-end;max-height:88vh}
+    .modal-head{padding:22px 22px 16px}
+    .modal-body{padding:20px 22px 26px}
+    .modal-head h3{font-size:21px}
+    h1.hero-title{font-size:42px}
+    h2.section-title{font-size:32px}
+    .modal-backdrop{padding:0;align-items:flex-end}
+    section{padding:64px 0}
+    .section-head{margin-bottom:40px}
+    .about-image{height:300px}
+  }
+  @media (max-width:780px){
+    .hero-grid{gap:32px}
+    .collage{height:440px}
+    .col-tag.t1{top:12px}
+    .col-tag.t2{bottom:12px}
+    .strip-track{gap:36px}
+    .strip-item{font-size:13px}
+  }
+</style>
+</head>
+<body>
+
+<template id="__bundler_thumbnail" data-bg-color="#0d4a8f">
+  <svg viewBox="0 0 1200 800" xmlns="http://www.w3.org/2000/svg">
+    <rect width="1200" height="800" fill="#0d4a8f"/>
+    <g stroke="#fff" stroke-width="14" stroke-linecap="round" fill="none">
+      <path d="M460 580 L600 240 L740 580"/>
+      <path d="M510 460 L690 460" opacity="0.85"/>
+    </g>
+    <circle cx="600" cy="240" r="22" fill="#fff"/>
+    <text x="600" y="700" text-anchor="middle" font-family="sans-serif" font-size="46" font-weight="600" fill="#fff">ARTIGAS</text>
+  </svg>
+</template>
+
+<div id="app"></div>
+
+<script src="https://unpkg.com/react@18.3.1/umd/react.development.js" integrity="sha384-hD6/rw4ppMLGNu3tX5cjIb+uRZ7UkRJ6BPkLpg4hAu/6onKUg4lLsHAs9EBPT82L" crossorigin="anonymous"></script>
+<script src="https://unpkg.com/react-dom@18.3.1/umd/react-dom.development.js" integrity="sha384-u6aeetuaXnQ38mYT8rp6sbXaQe3NL9t+IBXmnYxwkUI2Hw4bsp2Wvmx4yRQF1uAm" crossorigin="anonymous"></script>
+<script src="https://unpkg.com/@babel/standalone@7.29.0/babel.min.js" integrity="sha384-m08KidiNqLdpJqLq95G/LEi8Qvjl/xUYll3QILypMoQ65QorJ9Lvtp2RXYGBFj1y" crossorigin="anonymous"></script>
+
+<script type="text/babel" src="tweaks-panel.jsx"></script>
+<script type="text/babel">
+const { useState, useEffect, useMemo, useRef } = React;
+
+const TWEAK_DEFAULTS = /*EDITMODE-BEGIN*/{
+  "accent": "#0d4a8f",
+  "showFloatingCTA": true,
+  "heroVariant": "collage"
+}/*EDITMODE-END*/;
+
+const PRODUCTS = [
+  { id:1, name:"Papel Dúplex", cat:"Papel", img:"img/warehouse-01.jpg", desc:"Ideal para impresión, empaques y producción gráfica. Disponible en diversos gramajes y formatos.", specs:"230–350 g/m² · pliegos & bobinas" },
+  { id:2, name:"Papel Agenda", cat:"Papel", img:"img/warehouse-09.jpg", desc:"Para cuadernos, agendas y material de escritura. Excelente acabado y resistencia.", specs:"56–80 g/m² · bobinas" },
+  { id:3, name:"Cartulina Triple", cat:"Cartón", img:"img/warehouse-05.jpg", desc:"Resistencia premium para impresión, packaging y aplicaciones de alta exigencia.", specs:"180–300 g/m² · pliegos" },
+  { id:4, name:"Papel Adhesivo", cat:"Adhesivo", img:"img/warehouse-02.jpg", desc:"Para etiquetas, empaques y aplicaciones comerciales. Self-adhesive premium.", specs:"80–185 g/m² · 1000×700" },
+  { id:5, name:"Papel Cuché", cat:"Papel", img:"img/warehouse-06.jpg", desc:"Brillante o mate para impresiones de alta calidad y acabados profesionales.", specs:"90–300 g/m² · gloss / matte" },
+  { id:6, name:"Papel Foto", cat:"Papel", img:"img/warehouse-06.jpg", desc:"Papel fotográfico para impresiones de alta resolución y acabados premium.", specs:"160–300 g/m² · base photo" },
+  { id:7, name:"Cartón Kraft", cat:"Cartón", img:"img/warehouse-04.jpg", desc:"Resistente para packaging, embalaje y soluciones industriales.", specs:"120–400 g/m² · pliegos" },
+  { id:8, name:"Bond en Bobinas", cat:"Bobinas", img:"img/warehouse-10.jpg", desc:"Papel bond en bobinas para fabricación de cuadernos y producción industrial.", specs:"56–90 g/m² · bobinas industriales" },
+];
+
+const INDUSTRIES = [
+  "Imprentas","Editoriales","Empresas de packaging","Mayoristas",
+  "Distribuidores","Fábricas de cuadernos","Negocios de etiquetas","Papelerías",
+  "Consultorios médicos","Farmacias","Minoristas","Industrias gráficas"
+];
+
+const WHY = [
+  { n:"01", t:"+20 años de experiencia", d:"Trayectoria sólida abasteciendo negocios e industrias en toda Bolivia." },
+  { n:"02", t:"Envíos a toda Bolivia", d:"Logística eficiente y entregas nacionales coordinadas con su operación." },
+  { n:"03", t:"Venta por volumen", d:"Atención especializada para pedidos grandes, pallets y bobinas." },
+  { n:"04", t:"Stock permanente", d:"Amplia variedad de papeles, cartones y gramajes siempre disponibles." },
+];
+
+const STEPS = [
+  { n:"Paso 01", t:"Selección", d:"Eliges el material y la presentación que necesitas." },
+  { n:"Paso 02", t:"Especificación", d:"Indícanos cantidad, gramaje, formato y plazo." },
+  { n:"Paso 03", t:"Cotización", d:"Te enviamos una propuesta personalizada en menos de 24h." },
+  { n:"Paso 04", t:"Entrega", d:"Coordinamos el envío a tu ciudad o retiro en almacén." },
+];
+
+const BENEFITS_STRIP = [
+  "Envíos a toda Bolivia","Venta por volumen","Atención personalizada",
+  "Stock permanente","Pallets y bobinas","Importación directa",
+  "+20 años de experiencia","Cotización en 24h"
+];
+
+function BrandLogo(){
+  return (
+    <svg className="brand-logo" viewBox="0 0 40 40" aria-label="Artigas Import Export">
+      <rect x="1" y="1" width="38" height="38" rx="9" fill="var(--accent)"/>
+      <g stroke="#fff" strokeWidth="1.6" strokeLinecap="round" fill="none">
+        <path d="M11 27 L20 11 L29 27"/>
+        <path d="M14.5 21 L25.5 21" opacity="0.85"/>
+      </g>
+      <circle cx="20" cy="11" r="1.6" fill="#fff"/>
+    </svg>
+  );
+}
+
+function openWA(e){
+  if(e) e.preventDefault();
+  const phone = '59173640039';
+  const text = encodeURIComponent('Hola Artigas, quisiera solicitar una cotización.');
+  const isMobile = /Android|iPhone|iPad|iPod/i.test(navigator.userAgent);
+  // Mobile → app scheme; Desktop → WhatsApp Web directo (evita el hop por api.whatsapp.com)
+  const url = isMobile
+    ? `whatsapp://send?phone=${phone}&text=${text}`
+    : `https://web.whatsapp.com/send?phone=${phone}&text=${text}`;
+  const w = window.open(url, '_blank', 'noopener,noreferrer');
+  // Fallback si el navegador bloquea la apertura
+  if(!w) window.location.href = url;
+}
+
+function NavBar({ onQuote }){
+  const [menuOpen, setMenuOpen] = useState(false);
+  return (
+    <header className="nav">
+      <div className="wrap nav-row">
+        <a href="#top" className="brand">
+          <BrandLogo/>
+          <div className="brand-name">Artigas<small>Import Export</small></div>
+        </a>
+        {menuOpen && <div className="nav-overlay" onClick={()=>setMenuOpen(false)}/>}
+        <nav className={`nav-links ${menuOpen?'open':''}`} onClick={()=>setMenuOpen(false)}>
+          <a href="#productos">Productos</a>
+          <a href="#nosotros">Nosotros</a>
+          <a href="#industrias">Industrias</a>
+          <a href="#proceso">Proceso</a>
+          <a href="#contacto">Contacto</a>
+        </nav>
+        <div className="nav-actions">
+          <a className="nav-wa" href="https://wa.me/59173640039?text=Hola%20Artigas%2C%20quisiera%20una%20cotizaci%C3%B3n" target="_blank" rel="noopener noreferrer" onClick={openWA}>
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20.5 3.5A11 11 0 0 0 4.2 18l-1.6 5.8 5.9-1.5A11 11 0 1 0 20.5 3.5Zm-8.5 17.7a9.2 9.2 0 0 1-4.7-1.3l-.3-.2-3.5.9.9-3.4-.2-.4a9.2 9.2 0 1 1 7.8 4.4Zm5-6.9c-.3-.1-1.6-.8-1.9-.9-.3-.1-.4-.1-.6.1-.2.3-.7.9-.8 1-.2.1-.3.2-.6.1-1.6-.8-2.7-1.5-3.7-3.3-.3-.5.3-.5.8-1.5.1-.2 0-.3 0-.5l-.9-2.1c-.2-.5-.5-.4-.6-.5h-.5c-.2 0-.5.1-.7.3-.3.3-1 1-1 2.4 0 1.5 1 2.8 1.2 3 .1.2 2.1 3.2 5 4.5 1.8.7 2.5.8 3.4.7.5-.1 1.6-.7 1.8-1.3.2-.6.2-1.1.2-1.3-.1-.2-.3-.3-.6-.4Z"/></svg>
+            <span className="lbl">WhatsApp</span>
+          </a>
+          <button className="nav-cta" onClick={onQuote}>
+            Cotizar <span style={{fontSize:14}}>→</span>
+          </button>
+          <button className="nav-burger" onClick={()=>setMenuOpen(o=>!o)} aria-label="Menú">
+            <span></span><span></span><span></span>
+          </button>
+        </div>
+      </div>
+    </header>
+  );
+}
+
+function Hero({ onQuote, onCatalog }){
+  return (
+    <section className="hero" id="top">
+      <div className="wrap">
+        <div className="hero-grid">
+          <div>
+            <div className="eyebrow"><span className="dot"></span><span className="mono">Importadores · Bolivia · Desde 2003</span></div>
+            <h1 className="hero-title display">
+              Más de 20 años abasteciendo <span className="accent">papel, cartones</span> y materiales gráficos en toda Bolivia.
+            </h1>
+            <p className="hero-sub">
+              Importadores y distribuidores de papel dúplex, cartulinas, papel adhesivo, papel bond en bobinas, cartones y materiales para impresión, packaging y producción industrial.
+            </p>
+            <div className="hero-ctas">
+              <button className="btn btn-primary" onClick={onQuote}>
+                Solicitar cotización <span>→</span>
+              </button>
+              <a className="btn btn-ghost" href="#productos">
+                Ver catálogo
+              </a>
+            </div>
+            <div className="hero-stats">
+              <div className="stat"><span className="num">20+</span><span className="lbl">Años abasteciendo</span></div>
+              <div className="stat"><span className="num">8</span><span className="lbl">Líneas de producto</span></div>
+              <div className="stat"><span className="num">100%</span><span className="lbl">Cobertura nacional</span></div>
+            </div>
+          </div>
+          <div className="collage">
+            <div className="col-tag t1">
+              <div className="tag-num">20+</div>
+              <div className="tag-text">Años importando papel a Bolivia</div>
+            </div>
+            <div className="col-img col-1"><img src="img/warehouse-01.jpg" alt="Almacén Artigas — pallets de papel"/></div>
+            <div className="col-img col-2"><img src="img/warehouse-07.jpg" alt="Pallets de cartón gris"/></div>
+            <div className="col-img col-3"><img src="img/warehouse-10.jpg" alt="Bobinas de papel bond"/></div>
+            <div className="col-tag t2">
+              <div className="tag-num" style={{fontSize:14, color:'var(--ink)'}}>📦</div>
+              <div className="tag-text"><strong>Stock permanente</strong><br/>Pallets · Bobinas · Pliegos</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  );
+}
+
+function BenefitsStrip(){
+  const items = [...BENEFITS_STRIP, ...BENEFITS_STRIP];
+  return (
+    <div className="strip">
+      <div className="strip-track">
+        {items.map((b,i)=>(
+          <span className="strip-item" key={i}><span className="check">✓</span>{b}</span>
+        ))}
+      </div>
+    </div>
+  );
+}
+
+function About(){
+  return (
+    <section className="about" id="nosotros">
+      <div className="wrap">
+        <div className="section-head">
+          <div>
+            <div className="section-kicker">Quiénes somos</div>
+          </div>
+          <div>
+            <h2 className="section-title display">
+              Experiencia, abastecimiento y <span className="it">confianza</span>.
+            </h2>
+          </div>
+        </div>
+        <div className="about-grid">
+          <div className="about-image">
+            <img src="img/warehouse-08.jpg" alt="Almacén Artigas Import Export"/>
+          </div>
+          <div className="about-text">
+            <p>En Artigas Import Export llevamos más de dos décadas abasteciendo materiales de papel y cartón para empresas, imprentas, consultorios, farmacias, distribuidores y negocios en toda Bolivia.</p>
+            <p>Trabajamos con productos de alta demanda para impresión, packaging, etiquetas, cuadernos, papelería y producción industrial — ofreciendo atención personalizada, variedad de gramajes y disponibilidad por volumen.</p>
+            <p>Nuestro compromiso: soluciones confiables, entregas eficientes y productos de calidad para cada cliente.</p>
+            <div className="about-meta">
+              <div className="m"><span className="v">2003</span><span className="k">Año de fundación</span></div>
+              <div className="m"><span className="v">9</span><span className="k">Departamentos servidos</span></div>
+              <div className="m"><span className="v">24h</span><span className="k">Tiempo de cotización</span></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  );
+}
+
+function Products({ onQuote }){
+  const cats = ["Todos","Papel","Cartón","Adhesivo","Bobinas"];
+  const [active, setActive] = useState("Todos");
+  const visible = useMemo(()=> active==="Todos" ? PRODUCTS : PRODUCTS.filter(p=>p.cat===active), [active]);
+  return (
+    <section id="productos">
+      <div className="wrap">
+        <div className="section-head">
+          <div>
+            <div className="section-kicker">Catálogo</div>
+          </div>
+          <div>
+            <h2 className="section-title display">
+              Materiales para <span className="it">impresión, packaging</span> y producción industrial.
+            </h2>
+            <p className="section-lead" style={{marginTop:24}}>
+              Explora nuestras líneas de papel, cartones y materiales gráficos. Todos disponibles por pallets, bobinas o pliegos para empresas y negocios.
+            </p>
+          </div>
+        </div>
+        <div className="filters">
+          {cats.map(c=>(
+            <button key={c} className={`chip ${active===c?'active':''}`} onClick={()=>setActive(c)}>{c}</button>
+          ))}
+        </div>
+        <div className="products-grid">
+          {visible.map(p=>(
+            <article className="product" key={p.id} onClick={()=>onQuote(p.name)}>
+              <div className="product-img">
+                <span className="product-tag">{p.cat}</span>
+                <img src={p.img} alt={p.name}/>
+              </div>
+              <div className="product-body">
+                <h3 className="product-title">{p.name}</h3>
+                <p className="product-desc">{p.desc}</p>
+                <div className="product-foot">
+                  <span className="specs">{p.specs}</span>
+                  <span className="arrow">→</span>
+                </div>
+              </div>
+            </article>
+          ))}
+        </div>
+      </div>
+    </section>
+  );
+}
+
+function Industries(){
+  return (
+    <section className="industries" id="industrias">
+      <div className="wrap">
+        <div className="section-head">
+          <div>
+            <div className="section-kicker">Industrias</div>
+          </div>
+          <div>
+            <h2 className="section-title display">
+              Soluciones para <span className="it">distintos rubros</span>.
+            </h2>
+            <p className="section-lead" style={{marginTop:24}}>
+              Trabajamos con empresas, negocios y distribuidores que requieren abastecimiento confiable y materiales de calidad para sus operaciones.
+            </p>
+          </div>
+        </div>
+        <div className="ind-grid">
+          {INDUSTRIES.map((i,idx)=>(
+            <div className="ind-cell" key={i}>
+              <span className="num">{String(idx+1).padStart(2,'0')}</span>
+              <span className="name">{i}<span className="dot"/></span>
+            </div>
+          ))}
+        </div>
+      </div>
+    </section>
+  );
+}
+
+function WhyUs(){
+  return (
+    <section>
+      <div className="wrap">
+        <div className="section-head">
+          <div>
+            <div className="section-kicker">Por qué elegirnos</div>
+          </div>
+          <div>
+            <h2 className="section-title display">
+              Más que papel, una <span className="it">solución confiable</span>.
+            </h2>
+          </div>
+        </div>
+        <div className="why-grid">
+          {WHY.map(w=>(
+            <div className="why-card" key={w.n}>
+              <span className="why-num">{w.n}</span>
+              <h3>{w.t}</h3>
+              <p>{w.d}</p>
+            </div>
+          ))}
+        </div>
+      </div>
+    </section>
+  );
+}
+
+function Process(){
+  return (
+    <section className="process" id="proceso">
+      <div className="wrap">
+        <div className="section-head">
+          <div>
+            <div className="section-kicker">Cómo funciona</div>
+          </div>
+          <div>
+            <h2 className="section-title display">
+              Cotiza de manera <span className="it">simple</span>.
+            </h2>
+          </div>
+        </div>
+        <div className="steps">
+          {STEPS.map(s=>(
+            <div className="step" key={s.n}>
+              <span className="step-num">{s.n}</span>
+              <h4>{s.t}</h4>
+              <p>{s.d}</p>
+            </div>
+          ))}
+        </div>
+      </div>
+    </section>
+  );
+}
+
+function CTA({ onQuote }){
+  return (
+    <section className="cta" id="contacto">
+      <div className="wrap cta-inner">
+        <div>
+          <div className="section-kicker" style={{color:'rgba(255,255,255,.75)'}}>
+            <span style={{background:'rgba(255,255,255,.6)'}}></span>
+          </div>
+          <h2>¿Buscas un proveedor confiable de papel y cartón?</h2>
+          <p>Solicita una cotización personalizada según el tipo de material, gramaje y volumen que necesitas. Respondemos en menos de 24 horas hábiles.</p>
+          <div className="cta-actions">
+            <button className="btn btn-primary" onClick={()=>onQuote()}>
+              Solicitar cotización →
+            </button>
+            <a className="btn btn-wa" href="https://wa.me/59173640039?text=Hola%20Artigas" target="_blank" rel="noopener noreferrer" onClick={openWA}>
+              <svg viewBox="0 0 24 24" style={{width:18,height:18,fill:'#fff'}}><path d="M20.5 3.5A11 11 0 0 0 4.2 18l-1.6 5.8 5.9-1.5A11 11 0 1 0 20.5 3.5Zm-8.5 17.7a9.2 9.2 0 0 1-4.7-1.3l-.3-.2-3.5.9.9-3.4-.2-.4a9.2 9.2 0 1 1 7.8 4.4Zm5-6.9c-.3-.1-1.6-.8-1.9-.9-.3-.1-.4-.1-.6.1-.2.3-.7.9-.8 1-.2.1-.3.2-.6.1-1.6-.8-2.7-1.5-3.7-3.3-.3-.5.3-.5.8-1.5.1-.2 0-.3 0-.5l-.9-2.1c-.2-.5-.5-.4-.6-.5h-.5c-.2 0-.5.1-.7.3-.3.3-1 1-1 2.4 0 1.5 1 2.8 1.2 3 .1.2 2.1 3.2 5 4.5 1.8.7 2.5.8 3.4.7.5-.1 1.6-.7 1.8-1.3.2-.6.2-1.1.2-1.3-.1-.2-.3-.3-.6-.4Z"/></svg>
+              Hablar por WhatsApp
+            </a>
+          </div>
+        </div>
+        <div className="contact-card">
+          <h4>Contacto directo</h4>
+          <div className="contact-row">
+            <div className="ico">📍</div>
+            <div>
+              <div className="label">Almacén & oficina</div>
+              <a href="https://maps.app.goo.gl/dsPV2hNGSCDwsKyZ7" target="_blank" rel="noreferrer">Santa Cruz de la Sierra, Bolivia</a>
+            </div>
+          </div>
+          <div className="contact-row">
+            <div className="ico">📞</div>
+            <div>
+              <div className="label">Teléfono / WhatsApp</div>
+              <a href="https://wa.me/59173640039">+591 736 40039</a>
+            </div>
+          </div>
+          <div className="contact-row">
+            <div className="ico">✉</div>
+            <div>
+              <div className="label">Cotizaciones</div>
+              <a href="mailto:fabricio@artigasimportexport.com">fabricio@artigasimportexport.com</a>
+            </div>
+          </div>
+          <div className="contact-row">
+            <div className="ico">⏱</div>
+            <div>
+              <div className="label">Horario</div>
+              <span style={{color:'#fff'}}>Lun–Vie · 8:00–12:00 & 14:00–18:00</span>
+            </div>
+          </div>
+          <div className="map-block">
+            <iframe loading="lazy" referrerPolicy="no-referrer-when-downgrade"
+              src="https://www.google.com/maps?q=Santa+Cruz+de+la+Sierra,+Bolivia&output=embed"
+              title="Ubicación Artigas Import Export"></iframe>
+            <div className="map-foot">
+              <span>Santa Cruz de la Sierra, Bolivia</span>
+              <a href="https://maps.app.goo.gl/dsPV2hNGSCDwsKyZ7" target="_blank" rel="noopener noreferrer">Cómo llegar →</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  );
+}
+
+function Footer(){
+  return (
+    <footer>
+      <div className="wrap">
+        <div className="foot-grid">
+          <div>
+            <div style={{display:'flex',alignItems:'center',gap:12,marginBottom:14}}>
+              <BrandLogo/>
+              <div className="foot-brand-name" style={{margin:0}}>Artigas Import Export</div>
+            </div>
+            <p style={{margin:0, lineHeight:1.6, maxWidth:340}}>
+              Importadores y distribuidores de papel, cartones y materiales gráficos para empresas y negocios en toda Bolivia.
+            </p>
+          </div>
+          <div>
+            <h5>Productos</h5>
+            <ul>
+              <li><a href="#productos">Papel dúplex</a></li>
+              <li><a href="#productos">Cartulina triple</a></li>
+              <li><a href="#productos">Papel adhesivo</a></li>
+              <li><a href="#productos">Bond en bobinas</a></li>
+              <li><a href="#productos">Cartón kraft</a></li>
+            </ul>
+          </div>
+          <div>
+            <h5>Empresa</h5>
+            <ul>
+              <li><a href="#nosotros">Nosotros</a></li>
+              <li><a href="#industrias">Industrias</a></li>
+              <li><a href="#proceso">Proceso</a></li>
+              <li><a href="#contacto">Contacto</a></li>
+            </ul>
+          </div>
+          <div>
+            <h5>Contacto</h5>
+            <ul>
+              <li><a href="https://maps.app.goo.gl/dsPV2hNGSCDwsKyZ7" target="_blank" rel="noreferrer">Santa Cruz, Bolivia</a></li>
+              <li><a href="https://wa.me/59173640039">+591 736 40039</a></li>
+              <li><a href="mailto:fabricio@artigasimportexport.com">fabricio@artigasimportexport.com</a></li>
+            </ul>
+          </div>
+        </div>
+        <div className="foot-bottom">
+          <span>© 2026 Artigas Import Export · Todos los derechos reservados</span>
+          <span>artigasimportexport.com · Importación · Distribución · Bolivia</span>
+        </div>
+      </div>
+    </footer>
+  );
+}
+
+const BUSINESS_PHONE = '59173640039';
+const BUSINESS_EMAIL = 'fabricio@artigasimportexport.com';
+// Google Apps Script Web App URL (PASO 5 de la guía). Pega aquí la URL que termina en /exec
+const SHEETS_ENDPOINT = ''; // <-- pegar aquí la URL del Web App de Google Sheets
+
+function buildQuoteText(form){
+  return [
+    '*Nueva solicitud de cotización — Artigas Import Export*',
+    '',
+    `• Cliente: ${form.nombre}`,
+    `• Teléfono: ${form.telefono}`,
+    `• Email: ${form.email || '—'}`,
+    `• Producto: ${form.producto}`,
+    '',
+    'Detalle del pedido:',
+    form.mensaje,
+    '',
+    `Enviado desde artigasimportexport.com · ${new Date().toLocaleString('es-BO')}`
+  ].join('\n');
+}
+
+function QuoteModal({ open, onClose, prefill }){
+  const [sent, setSent] = useState(false);
+  const [form, setForm] = useState({ nombre:"", telefono:"", email:"", producto: prefill||"Papel Dúplex", mensaje:"" });
+  useEffect(()=>{ if(prefill) setForm(f=>({...f, producto: prefill})); }, [prefill]);
+  useEffect(()=>{ if(open){ setSent(false); } },[open]);
+  if(!open) return null;
+
+  const change = (k)=>(e)=> setForm(f=>({...f,[k]:e.target.value}));
+
+  const submit = (e)=>{
+    e.preventDefault();
+    const text = buildQuoteText(form);
+
+    // 0) Guardar en Google Sheets (silencioso, en background)
+    if(SHEETS_ENDPOINT){
+      fetch(SHEETS_ENDPOINT, {
+        method: 'POST',
+        mode: 'no-cors',
+        headers: {'Content-Type': 'application/json'},
+        body: JSON.stringify({
+          timestamp: new Date().toISOString(),
+          ...form
+        })
+      }).catch(()=>{}); // fallar silenciosamente
+    }
+
+    // 1) Mensaje a WhatsApp del negocio con todos los detalles
+    const isMobile = /Android|iPhone|iPad|iPod/i.test(navigator.userAgent);
+    const waUrl = isMobile
+      ? `whatsapp://send?phone=${BUSINESS_PHONE}&text=${encodeURIComponent(text)}`
+      : `https://web.whatsapp.com/send?phone=${BUSINESS_PHONE}&text=${encodeURIComponent(text)}`;
+    window.open(waUrl, '_blank', 'noopener,noreferrer');
+
+    // 2) Constancia por email al cliente (mailto pre-llenado)
+    if(form.email){
+      const subject = encodeURIComponent(`Constancia de solicitud — ${form.producto} · Artigas Import Export`);
+      const body = encodeURIComponent(
+        `Hola ${form.nombre},\n\n` +
+        `Hemos recibido tu solicitud de cotización. Estos son los datos registrados:\n\n` +
+        `• Producto: ${form.producto}\n` +
+        `• Teléfono: ${form.telefono}\n` +
+        `• Detalle: ${form.mensaje}\n\n` +
+        `Nuestro equipo te contactará en menos de 24h hábiles con la cotización personalizada.\n\n` +
+        `— Equipo Artigas Import Export\n` +
+        `WhatsApp: +591 736 40039\n` +
+        `Web: artigasimportexport.com`
+      );
+      // mailto al negocio con CC al cliente para que ambos tengan constancia
+      const mailto = `mailto:${BUSINESS_EMAIL}?cc=${encodeURIComponent(form.email)}&subject=${subject}&body=${body}`;
+      setTimeout(()=>{ window.location.href = mailto; }, 600);
+    }
+
+    setSent(true);
+  };
+
+  return (
+    <div className="modal-backdrop" onClick={onClose}>
+      <div className="modal" onClick={e=>e.stopPropagation()}>
+        {!sent ? (<>
+          <div className="modal-head">
+            <div>
+              <h3>Solicitar cotización</h3>
+              <p>Al enviar, se abre WhatsApp con tu pedido y recibes constancia por email.</p>
+            </div>
+            <button className="modal-close" onClick={onClose}>×</button>
+          </div>
+          <form className="modal-body" onSubmit={submit}>
+            <div className="field"><label>Nombre</label><input required value={form.nombre} onChange={change('nombre')} placeholder="Tu nombre o empresa"/></div>
+            <div className="field-row">
+              <div className="field"><label>Teléfono / WhatsApp</label><input required value={form.telefono} onChange={change('telefono')} placeholder="+591 ..."/></div>
+              <div className="field"><label>Email (constancia)</label><input type="email" required value={form.email} onChange={change('email')} placeholder="tu@empresa.com"/></div>
+            </div>
+            <div className="field"><label>Producto</label>
+              <select value={form.producto} onChange={change('producto')}>
+                {PRODUCTS.map(p=><option key={p.id}>{p.name}</option>)}
+                <option>Otro / consultar</option>
+              </select>
+            </div>
+            <div className="field"><label>¿Qué necesitas? (cantidad, gramaje, ciudad)</label><textarea required value={form.mensaje} onChange={change('mensaje')} placeholder="Ej: 5 pallets de dúplex 250g, formato 70×100, entrega en Cochabamba"/></div>
+            <div style={{background:'var(--bg-2)',padding:'12px 14px',borderRadius:6,fontSize:12.5,color:'var(--muted)',lineHeight:1.5,marginBottom:16}}>
+              Al enviar abriremos: <strong style={{color:'var(--ink)'}}>(1)</strong> WhatsApp con tu pedido a +591 736 40039 y <strong style={{color:'var(--ink)'}}>(2)</strong> tu cliente de email con la constancia.
+            </div>
+            <div className="modal-foot">
+              <button type="button" className="btn btn-ghost" onClick={onClose}>Cancelar</button>
+              <button type="submit" className="btn btn-primary">Enviar pedido →</button>
+            </div>
+          </form>
+        </>) : (
+          <div className="success">
+            <div className="check-big">✓</div>
+            <h3 style={{fontFamily:'Space Grotesk',fontSize:24,margin:'0 0 8px'}}>¡Pedido enviado!</h3>
+            <p style={{color:'var(--muted)',margin:'0 auto 20px',maxWidth:380,fontSize:14.5,lineHeight:1.55}}>
+              Se abrió WhatsApp con los detalles de tu cotización y la constancia por email. Si alguna ventana no se abrió, revisa los pop-ups de tu navegador.
+            </p>
+            <p style={{color:'var(--muted)',margin:'0 auto 24px',maxWidth:380,fontSize:13}}>
+              Te contactaremos en menos de 24h hábiles.
+            </p>
+            <button className="btn btn-primary" onClick={onClose}>Cerrar</button>
+          </div>
+        )}
+      </div>
+    </div>
+  );
+}
+
+function FloatingWA(){
+  return (
+    <a href="https://wa.me/59173640039?text=Hola%20Artigas" target="_blank" rel="noopener noreferrer" onClick={openWA}
+      style={{position:'fixed',bottom:24,right:24,zIndex:40,width:58,height:58,borderRadius:'50%',background:'#1faa53',color:'#fff',display:'grid',placeItems:'center',boxShadow:'0 14px 30px -8px rgba(31,170,83,.5)',transition:'transform .2s'}}
+      onMouseEnter={e=>e.currentTarget.style.transform='scale(1.08)'}
+      onMouseLeave={e=>e.currentTarget.style.transform='scale(1)'}
+      aria-label="WhatsApp">
+      <svg viewBox="0 0 24 24" style={{width:28,height:28,fill:'#fff'}}><path d="M20.5 3.5A11 11 0 0 0 4.2 18l-1.6 5.8 5.9-1.5A11 11 0 1 0 20.5 3.5Zm-8.5 17.7a9.2 9.2 0 0 1-4.7-1.3l-.3-.2-3.5.9.9-3.4-.2-.4a9.2 9.2 0 1 1 7.8 4.4Zm5-6.9c-.3-.1-1.6-.8-1.9-.9-.3-.1-.4-.1-.6.1-.2.3-.7.9-.8 1-.2.1-.3.2-.6.1-1.6-.8-2.7-1.5-3.7-3.3-.3-.5.3-.5.8-1.5.1-.2 0-.3 0-.5l-.9-2.1c-.2-.5-.5-.4-.6-.5h-.5c-.2 0-.5.1-.7.3-.3.3-1 1-1 2.4 0 1.5 1 2.8 1.2 3 .1.2 2.1 3.2 5 4.5 1.8.7 2.5.8 3.4.7.5-.1 1.6-.7 1.8-1.3.2-.6.2-1.1.2-1.3-.1-.2-.3-.3-.6-.4Z"/></svg>
+    </a>
+  );
+}
+
+function App(){
+  const [t, setTweak] = useTweaks(TWEAK_DEFAULTS);
+  const [modal, setModal] = useState(false);
+  const [prefill, setPrefill] = useState(null);
+  useEffect(()=>{ document.documentElement.style.setProperty('--accent', t.accent); }, [t.accent]);
+
+  const openQuote = (productName)=>{ setPrefill(productName||null); setModal(true); };
+
+  return (<>
+    <NavBar onQuote={()=>openQuote()} />
+    <Hero onQuote={()=>openQuote()} />
+    <BenefitsStrip />
+    <About />
+    <Products onQuote={openQuote} />
+    <Industries />
+    <WhyUs />
+    <Process />
+    <CTA onQuote={()=>openQuote()} />
+    <Footer />
+    {t.showFloatingCTA && <FloatingWA/>}
+    <QuoteModal open={modal} prefill={prefill} onClose={()=>setModal(false)} />
+
+    <TweaksPanel title="Tweaks">
+      <TweakSection title="Visual">
+        <TweakColor label="Color de acento" value={t.accent}
+          options={["#1f6b3e","#0d4a8f","#b1521f","#2a2a26"]}
+          onChange={v=>setTweak('accent', v)} />
+        <TweakToggle label="Botón flotante de WhatsApp" value={t.showFloatingCTA}
+          onChange={v=>setTweak('showFloatingCTA', v)} />
+      </TweakSection>
+    </TweaksPanel>
+  </>);
+}
+
+ReactDOM.createRoot(document.getElementById('app')).render(<App/>);
+</script>
+</body>
+</html>
